@@ -11,7 +11,7 @@ ${tw`bg-blue-500 hover:bg-blue-800 text-white p-2 rounded`}`
 const ThirdPage = () => (
     <Layout>
         <Seo title="Page three"/>
-        <h1 tw>Hi from the 3 page</h1>
+        <h1 className="pl-14">Hi from the 3 page</h1>
         <p>success</p>
         <Link to="/">Go back to the homepage</Link>
       <Button>activate</Button>
