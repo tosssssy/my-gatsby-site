@@ -27,7 +27,7 @@ import Icon from "@material-tailwind/react/Icon";
 //
 // export default Header
 
-export default function Header() {
+export const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
