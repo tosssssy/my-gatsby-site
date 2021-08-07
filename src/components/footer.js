@@ -1,12 +1,12 @@
-import * as React from "react"
+import React from "react"
+import styled from "styled-components"
 
-const Footer = () => (
-  <footer className="w-300 h-50 bg-blue-200 text-2xl text-right pr-10">
-    © {new Date().getFullYear()}, Built with
-    {` `}
-    <a href="https://www.gatsbyjs.com">tossy</a>
-  </footer>
-)
+export const Footer = () => {
+  return (
+    <SDiv>フッター</SDiv>
+  )
+}
 
-
-export default Footer
+const SDiv = styled.div`
+  background-color: antiquewhite;
+`
