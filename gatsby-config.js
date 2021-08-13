@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `tossy-site`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `This is tossy-site.`,
+    author: `Toshiki`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`
   },
   plugins: [
@@ -30,10 +30,34 @@ module.exports = {
       }
     },
     `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-scroll-reveal`,
+    `gatsby-plugin-lodash`,
     `gatsby-plugin-emotion`,
+    {
+      resolve: "@chakra-ui/gatsby-plugin",
+      options: {
+        /**
+         * @property {boolean} [resetCSS=true]
+         * if false, this plugin will not use `<CSSReset />
+         */
+        resetCSS: true,
+        /**
+         * @property {boolean} [isUsingColorMode=true]
+         * if false, this plugin will not use <ColorModeProvider />
+         */
+        isUsingColorMode: true
+      }
+    },
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        devMode: true
+      }
+    }
+
 
 // this (optional) plugin enables Progressive Web App + Offline functionality
 // To learn more, visit: https://gatsby.dev/offline
 // `gatsby-plugin-offline`,
-],
+  ]
 }
