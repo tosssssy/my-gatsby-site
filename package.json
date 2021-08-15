@@ -21,6 +21,7 @@
     "gatsby-plugin-scroll-reveal": "^0.0.7",
     "gatsby-plugin-sharp": "^3.10.2",
     "gatsby-source-filesystem": "^3.10.0",
+    "gatsby-transformer-remark": "^4.8.0",
     "gatsby-transformer-sharp": "^3.10.0",
     "lodash": "^4.17.21",
     "netlify-cms-app": "^2.15.36",

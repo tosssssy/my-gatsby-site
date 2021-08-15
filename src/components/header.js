@@ -15,6 +15,7 @@ export const Header = () => {
     <Link to={"/"}>top</Link>
     <Link to={"/lesson1"}>lesson1</Link>
     <Link to={"/lesson2"}>lesson2</Link>
+    <Link to={"/lesson3"}>lesson3</Link>
      </chakra.div>
     </>
   )

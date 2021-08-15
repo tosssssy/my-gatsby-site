@@ -10,8 +10,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`
+        name: `news`,
+        path: `${__dirname}/contents/news`
       }
     },
     `gatsby-transformer-sharp`,
@@ -54,6 +54,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify-cms`,
+    `gatsby-transformer-remark`,
 
 
 // this (optional) plugin enables Progressive Web App + Offline functionality
