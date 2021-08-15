@@ -3,7 +3,6 @@ module.exports = {
     title: `tossy-site`,
     description: `This is tossy-site.`,
     author: `Toshiki`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -52,8 +51,9 @@ module.exports = {
       resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
       options: {
         devMode: true
-      }
-    }
+      },
+    },
+    `gatsby-plugin-netlify-cms`,
 
 
 // this (optional) plugin enables Progressive Web App + Offline functionality

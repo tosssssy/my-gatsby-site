@@ -1,0 +1,59 @@
+backend: # 連携するリポジトリの設定
+  name: git-gateway
+  branch: master
+
+publish_mode: editorial_workflow # ここで下書き機能を有効化
+
+media_folder: "contents/images" # 画像ファイル等を保存するフォルダを指定
+
+collections: # ここで個別に collection とそれが持つフィールドを設定
+  - name: 'news' # collection の識別子
+    label: 'News' # 管理画面で表示されるラベル
+    folder: 'contents/news' # collection のファイルが格納されるフォルダ
+    create: true # 新規投稿を許可するかどうか
+    slug: '{{fields.slug}}' # ここで指定した命名規則でファイルを生成
+    fields:
+      - {
+        label: 'タイトル (必須)', # 投稿画面で表示されるラベル
+        name: 'title', # フィールドの識別子
+        widget: 'string' # フィールドの形式を設定
+      }
+      - {
+        label: 'URL (必須)',
+        name: 'slug',
+        widget: 'string',
+        hint: '/news/hoge/ の hoge に入る URL となる文字列。e.g. 「2019-12-10」'
+          # 投稿画面に表示されるヒント
+      }
+      - {
+        label: 'Description',
+        name: 'description',
+        widget: 'text',
+        required: false, # 必須かどうか (デフォルトは true)
+        default: '', # プレースホルダーを指定
+        hint: 'OGP の description となるテキスト。ページには表示されません。',
+      }
+      - {
+        label: 'OGP 画像',
+        name: 'ogpThumbnail',
+        widget: 'image',
+        required: false,
+        default: '',
+        hint: 'OGP に使用される画像。ページには表示されません。'
+      }
+      - {
+        label: '本文 (必須)',
+        name: 'body',
+        widget: 'markdown'
+      }
+      - {
+        label: '投稿日時 (必須)',
+        name: 'date',
+        widget: 'datetime'
+      }
+      - {
+        label: 'テンプレートタイプ',
+        name: 'type',
+        widget: 'hidden',
+        default: 'news',
+      }
