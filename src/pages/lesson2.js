@@ -9,7 +9,6 @@ const Lesson2 = ({data}) => {
     <div>{data.site.siteMetadata.title}</div>
     <div>{data.site.siteMetadata.description}</div>
     <div>{data.site.siteMetadata.author}</div>
-
   </Layout>
 );}
 

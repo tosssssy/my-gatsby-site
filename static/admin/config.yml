@@ -11,20 +11,20 @@ collections: # ここで個別に collection とそれが持つフィールド�
     label: 'News' # 管理画面で表示されるラベル
     folder: 'contents/news' # collection のファイルが格納されるフォルダ
     create: true # 新規投稿を許可するかどうか
-    slug: '{{fields.slug}}' # ここで指定した命名規則でファイルを生成
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # ここで指定した命名規則でファイルを生成
     fields:
       - {
         label: 'タイトル (必須)', # 投稿画面で表示されるラベル
         name: 'title', # フィールドの識別子
         widget: 'string' # フィールドの形式を設定
       }
-      - {
-        label: 'URL (必須)',
-        name: 'slug',
-        widget: 'string',
-        hint: '/news/hoge/ の hoge に入る URL となる文字列。e.g. 「2019-12-10」'
-          # 投稿画面に表示されるヒント
-      }
+#      - {
+#        label: 'URL (必須)',
+#        name: 'slug',
+#        widget: 'string',
+#        hint: '/news/hoge/ の hoge に入る URL となる文字列。e.g. 「2019-12-10」'
+#          # 投稿画面に表示されるヒント
+#      }
       - {
         label: 'Description',
         name: 'description',
