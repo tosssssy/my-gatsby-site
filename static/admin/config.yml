@@ -11,7 +11,7 @@ collections: # ここで個別に collection とそれが持つフィールド�
     label: 'News' # 管理画面で表示されるラベル
     folder: 'contents/news' # collection のファイルが格納されるフォルダ
     create: true # 新規投稿を許可するかどうか
-    slug: '{{year}}-{{month}}-{{day}}}' # ここで指定した命名規則でファイルを生成
+    slug: '{{year}}-{{month}}-{{day}}' # ここで指定した命名規則でファイルを生成
     fields:
       - {
         label: 'タイトル (必須)', # 投稿画面で表示されるラベル
