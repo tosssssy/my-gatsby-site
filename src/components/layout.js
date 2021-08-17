@@ -11,13 +11,12 @@ import PropTypes from "prop-types"
 import { Header } from "./header"
 import { Footer } from "./footer"
 
-
 export const Layout = ({ children }) => {
   return (
     <>
-      <Header/>
+      <Header />
       <main>{children}</main>
-      <Footer/>
+      <Footer />
     </>
   )
 }

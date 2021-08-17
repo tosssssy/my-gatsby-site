@@ -1,16 +1,14 @@
-
 import { VFC } from "react"
 import { Badge, Box, Flex, Image, SimpleGrid, Text } from "@chakra-ui/react"
 import { MdStar } from "react-icons/md"
-
 
 type sampleCardProps = {
   cardList: Array<string>
 }
 
-export const SampleCard: VFC<sampleCardProps> = (props) => {
-  const { cardList } = props;
-  return(
+export const SampleCard: VFC<sampleCardProps> = props => {
+  const { cardList } = props
+  return (
     <SimpleGrid minChildWidth="320px" gap={"40px"}>
       {cardList.map(text => {
         return (
@@ -29,7 +27,12 @@ export const SampleCard: VFC<sampleCardProps> = (props) => {
                   Verified &bull; Cape Town
                 </Text>
               </Flex>
-              <Text mt={2} fontSize="xl" fontWeight="semibold" lineHeight="short">
+              <Text
+                mt={2}
+                fontSize="xl"
+                fontWeight="semibold"
+                lineHeight="short"
+              >
                 Modern, Chic Penthouse with Mountain, City & Sea Views
               </Text>
               <Text mt={2}>$119/night</Text>
@@ -44,5 +47,5 @@ export const SampleCard: VFC<sampleCardProps> = (props) => {
         )
       })}
     </SimpleGrid>
-  );
+  )
 }

@@ -4,14 +4,11 @@ import { Badge, Box, Flex, Image, Text } from "@chakra-ui/react"
 import { MdStar } from "react-icons/md"
 import { SampleCard } from "../components/SampleCard"
 
-
 const IndexPage = () => {
-  const tomatoList = [...Array(10) ]
+  const tomatoList = [...Array(10)]
   return (
     <Layout>
-      <SampleCard
-        cardList={tomatoList}
-      />
+      <SampleCard cardList={tomatoList} />
 
       <Box p="5" maxW="320px" borderWidth="1px">
         <Image borderRadius="md" src="https://bit.ly/2k1H1t6" />
@@ -38,8 +35,6 @@ const IndexPage = () => {
           </Text>
         </Flex>
       </Box>
-
-
     </Layout>
   )
 }
