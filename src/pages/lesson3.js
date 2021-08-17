@@ -1,6 +1,8 @@
 import * as React from "react"
 import { Layout } from "../components/layout"
 import { graphql } from "gatsby"
+import { NewsCard } from "../components/NewsCard"
+import { VStack } from "@chakra-ui/react"
 
 
 const Lesson3 = ({ data }) => {
@@ -8,17 +10,13 @@ const Lesson3 = ({ data }) => {
   const { edges } = data.allMarkdownRemark
   return (
     <Layout>
+      <VStack>
       {edges.map((edge, index) => {
         return (
-          <>
-            <div key={index}>
-              {/*<div>{edge.node.frontmatter.slug}</div>*/}
-              <div>{edge.node.frontmatter.title}</div>
-              <div dangerouslySetInnerHTML={{ __html: edge.node.html }} />
-            </div>
-          </>
+          <NewsCard key={index} title={edge.node.frontmatter.title} date={edge.node.frontmatter.date}/>
         )
       })}
+      </VStack>
     </Layout>
   )
 }
@@ -32,8 +30,6 @@ query MdQuery {
       node {
         frontmatter {
           date
-          description
-          ogpThumbnail
           title
           type
         }
