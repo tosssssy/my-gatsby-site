@@ -24,7 +24,7 @@ const Lesson3 = ({ data }) => {
 export default Lesson3
 
 export const query = graphql`
-query MdQuery {
+query NewsQuery {
   allMarkdownRemark {
     edges {
       node {
