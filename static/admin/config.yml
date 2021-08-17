@@ -27,7 +27,7 @@ collections: # ここで個別に collection とそれが持つフィールド�
       - {
         label: '本文 (必須)',
         name: 'body',
-        widget: 'markdown'
+        widget: 'markdown',
         hint: '本文はリッチテキスト形式でお願いします。画像がある場合も本文に含めて下さい。'
       }
       - {
